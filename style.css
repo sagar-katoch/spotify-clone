@@ -9,7 +9,10 @@
 }
 
 
-
+.body{
+    background-color: black;
+    color: white;
+}
 
 
 .left{
@@ -45,5 +48,39 @@ align-items: center;
 
 .heading span {
     font-size: 15px;
-    width: 100%;
+     width: 100%;
+}
+.footer{
+
+display: flex;
+
+font-size: 10px;
+
+gap: 13px;
+
+}
+.library{
+    position: relative;
+    min-height: 80vh;
+}
+.footer{
+    position: absolute;
+    bottom: 0;
+}
+.footer a{
+    color: gray;
+    width: 4px;
+}
+.nav img{
+    width: 15px;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(34,34,34);
+}
+.header > *{
+
+padding: 20px;
 }
