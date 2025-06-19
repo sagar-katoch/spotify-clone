@@ -102,7 +102,8 @@ padding: 20px;
 width: 200px;
 padding: 10px;
 border-radius: 5px;
-background-color: #252525
+background-color: #252525;
+position: relative;
 
 }
 .spotifyplaylists .card img{
@@ -113,3 +114,17 @@ background-color: #252525
 .card > *{
     padding-top: 10px;
 }
+
+.play{
+
+    width: 36px;
+    position:absolute;
+
+
+    bottom: 114px;
+    left: 160px;
+    opacity: 0;
+}
+
+
+
