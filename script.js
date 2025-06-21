@@ -13,7 +13,7 @@ async function getsongs() {
     for (let index = 0; index < as.length; index++) {
         const element = as[index];
         if (element.href.endsWith(".mp3")) {
-            songs.push(element.href);
+            songs.push(element.href.split("/songs/")[1]);
         }
     }
 
@@ -25,16 +25,14 @@ async function main() {
     let songs = await getsongs();
     console.log(songs);
 
-    // ✅ Fix: Add `.` to select class name
     let songul = document.querySelector(".songlist").getElementsByTagName("ul")[0];
 
     for (const song of songs) {
-        // ✅ Append as list item
-        songul.innerHTML = songul.innerHTML + `<li>${song}</li>`;
+        songul.innerHTML = songul.innerHTML + `<li>${song.replaceAll("%20","")}</li>`;
     }
 
-    //playing our first song
-    var audio = new Audio(songs[0]);
-    // audio.play(); // disabled due to autoplay restrictions
+    // ✅ Fix: prepend path to play full audio
+    var audio = new Audio("http://127.0.0.1:3000/songs/" + songs[0]);
+    // audio.play(); // still needs user interaction to play
 }
 main();
