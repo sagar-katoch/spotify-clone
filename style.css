@@ -191,13 +191,27 @@ font-weight: bold;
 .playbar{
     position: absolute;
     bottom: 0;
-    background-color: greenyellow;
-    width: 100%;
+    background-color: rgb(252, 252, 252);
+    width: 90%;
     padding: 12px;
+  
 }
 .playbuttons{
    display: flex;
    justify-content: center; 
    align-items: center;
    gap: 12px;
+}
+
+.songlist ul{
+
+padding: 0 42px;
+
+
+}
+
+.songlist ul li{
+margin-top: 12px;
+list-style-type: decimal;
+
 }
